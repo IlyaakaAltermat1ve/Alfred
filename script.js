@@ -1,11 +1,19 @@
 ﻿$(document).ready(function(){
-    var alfredSpeech ='Привет, гуманоиды';
-
-    $('.js-showHide').click(function() {
-        $('.alfred').toggleClass('-invisible');
-    })
-
-    $('.js-hello').click(function() {
-        $('.bubble').text(alfredSpeech)
-    });
+   $('.js-count').click(function() {
+        showBubble($('.js-firstNumber').val() + $('.js-secondNumber').val());
+   });
+   function showBubble(text)  {
+        $('.bubble').text(text);
+        $('.bubble').addClass('-visible');
+        setTimeout(function() {
+            $('.bubble').removeClass('-visible')} , 2000);
+   }
 });
+
+
+        var inputText =  $('.js-firstNumber').val();
+        if (inputText == "") {
+            showBubble("Вы ничего не ввели!");
+        }  else {
+            showBubble(inputText);
+        }

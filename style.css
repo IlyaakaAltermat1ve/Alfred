@@ -38,6 +38,9 @@
     color: black;
     font-weight: 900;
     border-radius: 15px;
+    min-width: 140px;
+    opacity: 0;
+    transition: .4s;
 }
 
 .bubble:before {
@@ -49,4 +52,27 @@
     background-color: white;
     width: 15px;
     height: 15px;
+}
+
+.bubble.-visible {
+    opacity: 1;
+}
+
+input, button {
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 13px;
+    font-weight: 900;
+    border: none;
+    outline: none;
+}
+
+
+input {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #f4f4f4;
 }
